@@ -6,5 +6,5 @@ $ dune build @install
 
 To run :
 ```sh
-$ dune exec src/vitor.exe
+$ dune exec src/test.exe
 ```
