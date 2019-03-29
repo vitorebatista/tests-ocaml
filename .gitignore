@@ -1,0 +1,47 @@
+*.annot
+*.cmo
+*.cma
+*.cmi
+*.a
+*.o
+*.cmx
+*.cmxs
+*.cmxa
+a.out
+
+# ocamlbuild working directory
+_build/
+
+# ocamlbuild targets
+*.byte
+*.native
+
+# oasis generated files
+setup.data
+setup.log
+
+# Vim and Emacs .merlin file
+.merlin
+
+# OS X files
+.DS_Store
+
+# Opam files
+*.install
+_opam/
+
+# Test files
+tmp/
+
+# Code coverage report
+_coverage/
+bisect*.out
+bisect.log
+
+# Tests with handwritten files in the repository
+*.tmp.prw
+*.tmp.prg
+*.tmp.ppo
+
+# Linter configuration file
+geraldo.json

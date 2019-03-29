@@ -1,0 +1,7 @@
+(executable
+    (name vitor)
+    (flags :standard -w -27)
+    (libraries
+        core)
+    (preprocess (pps
+        ppx_deriving.show)))
