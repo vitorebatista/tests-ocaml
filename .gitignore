@@ -37,11 +37,3 @@ tmp/
 _coverage/
 bisect*.out
 bisect.log
-
-# Tests with handwritten files in the repository
-*.tmp.prw
-*.tmp.prg
-*.tmp.ppo
-
-# Linter configuration file
-geraldo.json
