@@ -1,0 +1,6 @@
+version: "1.0"
+maintainer: "vitorebatista@gmail.com"
+authors: ["vitorebatista"]
+homepage: "https://github.com/vitorebatista/ocaml-tests"
+bug-reports: "https://github.com/vitorebatista/ocaml-tests/issues"
+dev-repo: "git+https://github.com/vitorebatista/ocaml-tests.git"

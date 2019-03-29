@@ -1,5 +1,5 @@
 (executable
-    (name vitor)
+    (name test)
     (flags :standard -w -27)
     (libraries
         core)

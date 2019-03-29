@@ -33,8 +33,8 @@ let fsdf =
 
 
 let () =
-    let usuarios = ["olar"; "bom"; "dia"; "bommmm"] in
-    usuarios
-    |> List.map ~f:String.uppercase_ascii
-    |> List.filter ~f:(Core.String.is_prefix ~prefix:"BOM")
+    let items = ["A"; "B"; "C"; "BA"; "CA"] in
+    items
+    |> List.filter ~f:(Core.String.is_suffix ~suffix:"A")
+    |> List.map ~f:String.lowercase_ascii
     |> List.iter ~f:print_endline
