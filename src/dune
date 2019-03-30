@@ -1,7 +1,17 @@
 (executable
     (name test)
-    (flags :standard -w -27)
+    (flags :standard -w -26-27)
     (libraries
         core)
+    (modules test)
+    (preprocess (pps
+        ppx_deriving.show)))
+
+(executable
+    (name factorial)
+    (flags :standard -w -26-27)
+    (libraries
+        core)
+    (modules factorial)
     (preprocess (pps
         ppx_deriving.show)))
