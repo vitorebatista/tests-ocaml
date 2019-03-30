@@ -42,6 +42,14 @@ let rec sort = function
     | x :: l -> if elem < x then elem :: x :: l
                 else x :: insert elem l;;
 
+let add_polynom p1 p2 =
+    let n1 = Array.length p1
+    and n2 = Array.length p2 in
+    let result = Array.make (max n1 n2) 0 in
+    for i = 0 to n1 - 1 do result.(i) <- p1.(i) done;
+    for i = 0 to n2 - 1 do result.(i) <- result.(i) + p2.(i) done;
+    result;;
+    
 let () =
     let items = ["A"; "B"; "C"; "BA"; "CA"] in
     items
@@ -60,9 +68,15 @@ let () =
     
     let s = sort [3; 4; 2; 1] in 
     s
-    |> List.iter ~f: print_int; print_newline ();;
+    |> List.iter ~f: print_int; print_newline ();
 
-
+    let s2 = sort ["yes"; "ok"; "sure"; "zup"; "yep"] in
+    print_newline ();
+    s2
+    |> List.iter ~f: print_string; print_newline ();
     
+    (* TODO how print this array list? *)
+    let ap = add_polynom [| 1; 2 |] [| 1; 2; 3 |] in 
+    ();;
 
 let olar () = "olar"
