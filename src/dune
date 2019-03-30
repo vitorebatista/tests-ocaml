@@ -15,3 +15,12 @@
     (modules factorial)
     (preprocess (pps
         ppx_deriving.show)))
+
+(executable
+    (name sigma)
+    (flags :standard -w -26-27)
+    (libraries
+        core)
+    (modules sigma)
+    (preprocess (pps
+        ppx_deriving.show)))

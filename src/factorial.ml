@@ -24,4 +24,4 @@ let () =
 
     let f = factorial2 5 in
     print_int f;
-    print_newline ()
+    print_newline ();
