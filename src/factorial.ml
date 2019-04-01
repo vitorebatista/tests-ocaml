@@ -14,24 +14,19 @@ ref init returns a new cell with initial contents init,
 cell := v writes the value v into cell.
 *)
 let factorial3 n =
-    let result = ref 1 in
+    let result = { contents = 1 } in
     for i = 2 to n do
-      result := i * !result
+      result := i * !result;
+      (* result.contents <- i * result.contents; *)
     done;
     !result;;
 
-
 let () =
-    let value = 5 in
+    let value = 
+      match int_of_string Sys.argv.(1) with
+      | n -> n
+      | exception Invalid_argument _ -> 1 in
 
-    let f = factorial value in
-    print_int f;
-    print_newline ();
-
-    let f = factorial2 value in
-    print_int f;
-    print_newline ();
-
-    let f = factorial3 value in
-    print_int f;
-    print_newline ();
+    Printf.printf "%d, " (factorial value);
+    Printf.printf "%d, " (factorial2 value);
+    Printf.printf "%d " (factorial3 value)

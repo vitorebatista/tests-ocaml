@@ -16,6 +16,16 @@
     (preprocess (pps
         ppx_deriving.show)))
 
+
+(executable
+    (name fibonacci)
+    (flags :standard -w -26-27)
+    (libraries
+        core)
+    (modules fibonacci)
+    (preprocess (pps
+        ppx_deriving.show)))
+
 (executable
     (name sigma)
     (flags :standard -w -26-27)
