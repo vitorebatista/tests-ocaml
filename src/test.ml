@@ -49,13 +49,41 @@ let add_polynom p1 p2 =
     for i = 0 to n1 - 1 do result.(i) <- p1.(i) done;
     for i = 0 to n2 - 1 do result.(i) <- result.(i) + p2.(i) done;
     result;;
-    
+
+let reverse lista =
+  let rec visit resultado pendente = 
+    match pendente with
+    | [] -> resultado
+    | pivo :: cauda -> visit (pivo :: resultado) cauda
+  in
+  visit [] lista;;
+
+let rec reverse' lista =
+  match lista with
+  | pivo :: cauda -> reverse cauda @ [pivo]
+  | [] -> []
+
+(* 
+  [1;2;3]
+
+  [] [1;2;3]
+  1 :: [] -> [2;3] -> [1]
+
+  2 [3] -> 2 :: [1] -> [2; 1]
+
+  3 :: 2 :: 1 []
+  -> [3;2;1] *)
+
 let () =
     let items = ["A"; "B"; "C"; "BA"; "CA"] in
     items
     |> List.filter ~f:(Core.String.is_suffix ~suffix:"A")
     |> List.map ~f:String.lowercase_ascii
     |> List.iter ~f:print_endline;
+
+    let rev = reverse [1; 2; 3 ] in
+    rev
+    |> List.iter ~f: print_int; print_newline ();
 
     let li = 1 :: 2 :: 3 :: [] in
     li
