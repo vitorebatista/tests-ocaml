@@ -34,3 +34,13 @@
     (modules sigma)
     (preprocess (pps
         ppx_deriving.show)))
+
+
+(executable
+    (name heapsort)
+    (flags :standard -w -26-27)
+    (libraries
+        core)
+    (modules heapsort)
+    (preprocess (pps
+        ppx_deriving.show)))
